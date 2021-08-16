@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>365Home</title>
+
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .container-fluid {
+            padding: 0px;
+            height: 72px;
+        }
+
+
+        /* Header */
+        .header {
+            background: linear-gradient(to right, #f1da36 0%, #fefcea 100%);
+            list-style-type: none;
+            padding: 10px 20px;
+            overflow: auto;
+        }
+
+        .header img {
+            border-radius: 10px;
+            height: 50px;
+            width: auto;
+        }
+
+        .header li {
+            float: left;
+            height: 50px;
+        }
+
+        .header .center {
+            text-align: center;
+            padding: 16px 10px;
+            box-sizing: border-box;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .header a:hover {
+            color: gray;
+        }
+
+
+        /* Slider */
+        .mySlides {
+            display: none;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .mySlides img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .slideshow-container {
+            overflow: hidden;
+            position: relative;
+            padding: 0px;
+            top: -10px;
+            width: 100%;
+            height: auto;
+        }
+
+        .slide-prev,
+        .slide-next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+        }
+
+        .slide-next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .slide-prev:hover,
+        .slide-next:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: black;
+            text-decoration: none;
+        }
+
+        /* Category */
+        .row {
+            padding: 0px 10px;
+            width: 100%;
+            margin: 10px 0px;
+        }
+
+        .contain {
+            padding: 0px;
+            margin-top: 5px;
+        }
+
+        .overlay {
+            text-align: center;
+            box-sizing: border-box;
+            width: 95%;
+            position: absolute;
+            bottom: 0px;
+            color: #f1f1f1;
+            background-color: rgba(0, 0, 0, 0.3);
+            font-size: 2vw;
+        }
+
+        img {
+            width: 95%;
+            height: 100%;
+        }
+
+        h1
+        {
+            color: aliceblue;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            background: linear-gradient(to right, #f1da36 0%, #fefcea 100%);
+            margin-top: 40px;
+            padding: 10px 0px;
+        }
+
+        .footer img {
+            border-radius: 10px;
+            height: 50px;
+            width: auto;
+        }
+
+        .footer>p {
+            display: inline-block;
+            padding: 0px 5px;
+        }
+
+        @media only screen and (min-width:0px) and (max-width:300px) {
+            .header {
+                padding: 10px 10px;
+            }
+
+            .header .center {
+                padding: 16px 5px;
+            }
+
+            h1 {
+                font-size: 5vw;
+            }
+
+            .footer>p {
+                font-size: 2vw;
+            }
+        }
+
+        @media only screen and (min-width:300px) and (max-width:515px) {
+            .footer>p {
+                font-size: 2vw;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .header .center {
+                padding: 16px 30px;
+            }
+
+            .overlay {
+                font-size: 1vw;
+            }
+        }
+    </style>
+
+    <script>
+        var slideIndex = 1;
+        function showSlides() {
+            var slides = document.getElementsByClassName("mySlides");
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            if (slideIndex < 1) { slideIndex = slides.length; }
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+        function plusSlides(n) {
+            slideIndex += n;
+            showSlides();
+        }
+        function currentSlide(n) {
+            slideIndex = n;
+            showSlides();
+        }
+        window.onload = showSlides;
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Header -->
+        <ul class="header">
+            <li><a href="index.html"><img src="img/365ep.jpg"></a></li>
+            <li class="center"><a href="movies.html">Movies</a></li>
+            <li class="center"><a href="#">TV Series</a></li>
+            <li class="center"><a href="audio.html">Audio</a></li>
+        </ul>
+
+        <!-- Slider -->
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="img/abc1.jpg">
+            </div>
+
+            <div class="mySlides">
+                <img src="img/abc2.jpg">
+            </div>
+
+            <div class="mySlides">
+                <img src="img/abc3.jpg">
+            </div>
+
+            <div class="mySlides">
+                <img src="img/abc4.jpg">
+            </div>
+
+            <div class="mySlides">
+                <img src="img/abc5.jpg">
+            </div>
+
+            <a class="slide-prev" onclick="plusSlides(-1)">❮</a>
+            <a class="slide-next" onclick="plusSlides(1)">❯</a>
+        </div>
+
+        <!-- Popular In Action -->
+        <div class="row">
+            <h1>Popular In Action</h1>
+            <hr>
+
+            <div class="contain col-xs-4 col-sm-2">
+                <img src="img/oop1.jpg" class="img-responsive">
+                <div class="overlay">
+                    <b>Last City</b><br>
+                    Thriller, Mystery & Comedy.
+                </div>
+            </div>
+
+            <div class="contain col-xs-4 col-sm-2">
+                <img src="img/oop2.jpg" class="img-responsive">
+                <div class="overlay">
+                    <b>Tomb Raider</b><br>
+                    Indian Crime Tragedy Film.
+                </div>
+            </div>
+
+            <div class="contain col-xs-4 col-sm-2">
+                <img src="img/oop3.jpg" class="img-responsive">
+                <div class="overlay">
+                    <b>Japanese Marvel</b><br>
+                    A Marvel Comics SuperHero Team.
+                </div>
+            </div>
+
+            <div class="contain col-xs-4 col-sm-2">
+                <img src="img/oop4.jpg" class="img-responsive">
+                <div class="overlay">
+                    <b>Bohemian</b><br>
+                    Japanese Manga Series Written By Tsugumi.
+                </div>
+            </div>
+
+            <div class="contain col-xs-4 col-sm-2">
+                <img src="img/oop5.jpg" class="img-responsive">
+                <div class="overlay">
+                    <b>Justice League</b><br>
+                    2003 American Martial Arts Film
+                </div>
+            </div>
+
+            <div class="contain col-xs-4 col-sm-2">
+                <img src="img/oop6.jpg" class="img-responsive">
+                <div class="overlay">
+                    <b>Borgia</b><br>
+                    Indian Action Drama Film
+                </div>
+            </div>
+        </div>
+
+        <!-- Popular In Drama -->
+        <div class="row">
+            <h1>Popular In Drama</h1>
+            <hr>
+
+            <div class="contain col-xs-4 col-sm-2">
+                <img src="img/oop7.jpg" class="img-responsive">
+                <div class="overlay">
+                    <b>The Nun</b><br>
+                    2016 ‧ Fantasy/Science Fiction.
+                </div>
+            </div>
+
+            <div class="contain col-xs-4 col-sm-2">
+                <img src="img/oop8.jpg" class="img-responsive">
+                <div class="overlay">
+                    <b>Avengers</b><br>
+                    Indian Crime Tragedy Film.
+                </div>
+            </div>
+
+            <div class="contain col-xs-4 col-sm-2">
+                <img src="img/oop9.jpg" class="img-responsive">
+                <div class="overlay">
+                    <b>Aquaman</b><br>
+                    Thriller, Mystery & Comedy.
+                </div>
+            </div>
+
+            <div class="contain col-xs-4 col-sm-2">
+                <img src="img/oop10.jpg" class="img-responsive">
+                <div class="overlay">
+                    <b>Tomb Raider</b><br>
+                    A Marvel Comics SuperHero Team.
+                </div>
+            </div>
+
+            <div class="contain col-xs-4 col-sm-2">
+                <img src="img/oop11.jpg" class="img-responsive">
+                <div class="overlay">
+                    <b>Fightclub</b><br>
+                    American Martial Arts Film.
+                </div>
+            </div>
+
+            <div class="contain col-xs-4 col-sm-2">
+                <img src="img/oop12.jpg" class="img-responsive">
+                <div class="overlay">
+                    <b>Myaoekai</b><br>
+                    Indian Crime Tragedy Film.
+                </div>
+            </div>
+        </div>
+
+        <!-- Popual In Sci-Fi -->
+        <div class="row">
+            <h1>Popular In Sci-Fi</h1>
+            <hr>
+
+            <div class="contain col-xs-4 col-sm-2">
+                <img src="img/oop13.jpg" class="img-responsive">
+                <div class="overlay">
+                    <b>Red Wars</b><br>
+                    Chinese Crime Thriller.
+                </div>
+            </div>
+
+            <div class="contain col-xs-4 col-sm-2">
+                <img src="img/oop14.jpg" class="img-responsive">
+                <div class="overlay">
+                    <b>Florida</b><br>
+                    Documentary Eastern Eravel.
+                </div>
+            </div>
+
+            <div class="contain col-xs-4 col-sm-2">
+                <img src="img/oop15.jpg" class="img-responsive">
+                <div class="overlay">
+                    <b>That Thing</b><br>
+                    Thriller Romance Drama Film.
+                </div>
+            </div>
+
+            <div class="contain col-xs-4 col-sm-2">
+                <img src="img/oop16.jpg" class="img-responsive">
+                <div class="overlay">
+                    <b>First Five</b><br>
+                    South Korean Entertainment.
+                </div>
+            </div>
+
+            <div class="contain col-xs-4 col-sm-2">
+                <img src="img/oop17.jpg" class="img-responsive">
+                <div class="overlay">
+                    <b>Shrooms</b><br>
+                    A Marvel Comics SuperHero Team.
+                </div>
+            </div>
+
+            <div class="contain col-xs-4 col-sm-2">
+                <img src="img/oop18.jpg" class="img-responsive">
+                <div class="overlay">
+                    <b>Superman</b><br>
+                    Indian Comedy & Romance.
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <a href="#top"><img src="img/365ep.jpg"></a>
+            <p><b>Powered By:</b>365 Entertainment Portal 2021. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>
